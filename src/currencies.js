@@ -15,8 +15,17 @@ var XTZValidator = require("./tezos_validator");
 var USDTValidator = require("./usdt_validator");
 var AlgoValidator = require("./algo_validator");
 var DotValidator = require("./dot_validator");
+var BANDValidator = require("./band_validator");
+var HBARValidator = require("./hbar_validator");
+var IOSTValidator = require("./iost_validator");
+var KSMValidator = require("./ksm_validator");
+var NEARValidator = require("./near_validator");
+var LUNAValidator = require("./luna_validator");
+var SCRTValidator = require("./scrt_validator copy");
+var ZILValidator = require("./zil_validator");
 var BIP173Validator = require("./bip173_validator");
 var Base58Validator = require("./base58_validator");
+const { forEach } = require("lodash");
 
 // defines P2PKH and P2SH address types for standard (prod) and testnet networks
 var CURRENCIES = [
@@ -79,6 +88,11 @@ var CURRENCIES = [
         name: "Balancer",
         symbol: "bal",
         validator: ETHValidator,
+    },
+    {
+        name: "Band Protocol",
+        symbol: "band",
+        validator: BANDValidator,
     },
     {
         name: "Basic Attention Token",
@@ -425,6 +439,11 @@ var CURRENCIES = [
         validator: ETHValidator,
     },
     {
+        name: "Hedera Hashgraph",
+        symbol: "hbar",
+        validator: HBARValidator,
+    },
+    {
         name: "HedgeTrade",
         symbol: "hedg",
         validator: ETHValidator,
@@ -448,6 +467,21 @@ var CURRENCIES = [
         name: "Immutable X",
         symbol: "imx",
         validator: ETHValidator,
+    },
+    {
+        name: "IOSToken",
+        symbol: "iost",
+        validator: IOSTValidator,
+    },
+    {
+        name: "Kusama",
+        symbol: "ksm",
+        validator: KSMValidator,
+    },
+    {
+        name: "NEAR",
+        symbol: "near",
+        validator: NEARValidator,
     },
     {
         name: "JFIN Coin",
@@ -525,9 +559,14 @@ var CURRENCIES = [
         validator: BTCValidator,
     },
     {
+        name: "Terra",
+        symbol: "luna",
+        validator: LUNAValidator,
+    },
+    {
         name: "Lukso",
         symbol: "lyxe",
-        validator: LSKValidator,
+        validator: ETHValidator,
     },
     {
         name: "Decentraland",
@@ -710,13 +749,18 @@ var CURRENCIES = [
         validator: SCValidator,
     },
     {
+        name: "Secret Network",
+        symbol: "scrt",
+        validator: SCRTValidator,
+    },
+    {
         name: "Serve",
         symbol: "serv",
         validator: ETHValidator,
     },
     {
         name: "SIX",
-        symbol: "SIX",
+        symbol: "six",
         validator: XLMValidator,
     },
     {
@@ -966,13 +1010,13 @@ var CURRENCIES = [
         validator: BTCValidator,
     },
     {
-        name: "0x",
-        symbol: "zrx",
-        validator: ETHValidator,
+        name: "Zilliqa",
+        symbol: "zil",
+        validator: ZILValidator,
     },
     {
-        name: "test",
-        symbol: "test",
+        name: "0x",
+        symbol: "zrx",
         validator: ETHValidator,
     },
 ];
@@ -991,6 +1035,10 @@ module.exports = {
         return CURRENCIES;
     },
 };
+
+CURRENCIES.sort((a, b) =>
+    a.symbol.toUpperCase() > b.symbol.toUpperCase() ? 1 : -1
+).forEach((c) => console.log('"' + c.symbol + " (" + c.name + ')",'));
 
 ////spit out details for readme.md
 // CURRENCIES

@@ -137,6 +137,8 @@ describe("WAValidator.validate()", function () {
             valid("Lb6wDP2kHGyWC7vrZuZAgV7V4ECyDdH7a6", "litecoin");
             valid("mzBc4XEFSdzCDcTxAgf6EZXgsZWpztRhef", "litecoin", "testnet");
 
+            valid("Le92F18AJpKnZZ3PCQqrUs3BNC3TwSb2u5", "ltc");
+
             // p2sh addresses
             valid("3NJZLcZEEYBpxYEUGewU4knsQRn1WM5Fkt", "litecoin");
             valid("2MxKEf2su6FGAUfCEAHreGFQvEYrfYNHvL7", "litecoin", "testnet");
@@ -1264,6 +1266,10 @@ describe("WAValidator.validate()", function () {
             valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "knc");
         });
 
+        it("should return true for correct kub addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "kub");
+        });
+
         it("should return true for correct mkr addresses", function () {
             valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "mkr");
         });
@@ -1303,6 +1309,10 @@ describe("WAValidator.validate()", function () {
         });
 
         //med
+        it("should return true for correct band addresses", function () {
+            valid("band1hu308kyg2h829ql2sy47r2gl3m6zld3csv5y73", "band");
+        });
+
         it("should return true for correct bat addresses", function () {
             valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "bat");
         });
@@ -1327,16 +1337,8 @@ describe("WAValidator.validate()", function () {
             valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "grt");
         });
 
-        it("should return true for correct ilv addresses", function () {
-            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "ilv");
-        });
-
-        it("should return true for correct imx addresses", function () {
-            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "imx");
-        });
-
-        it("should return true for correct lrc addresses", function () {
-            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "lrc");
+        it("should return true for correct hbar addresses", function () {
+            valid("0.0.827655", "hbar");
         });
 
         it("should return true for correct ilv addresses", function () {
@@ -1347,8 +1349,143 @@ describe("WAValidator.validate()", function () {
             valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "imx");
         });
 
+        it("should return true for correct iost addresses", function () {
+            valid("bitkubiost", "iost");
+        });
+
+        it("should return true for correct ksm addresses", function () {
+            valid("Cp81DWx8TZfr2Y6QeMb8JzGpPioUkpuFhx6C2KjABt53jV3", "ksm");
+        });
+
         it("should return true for correct lrc addresses", function () {
             valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "lrc");
+        });
+
+        it("should return true for correct near addresses", function () {
+            valid(
+                "c07bddf4d2bf17473eada3e54a9d459ebde1b40a2d1698702b81b87da5bf97b0",
+                "near"
+            );
+        });
+
+        it("should return true for correct ocean addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "ocean");
+        });
+
+        it("should return true for correct op addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "op");
+        });
+
+        it("should return true for correct xtz addresses", function () {
+            valid("tz1Vy1qKEaQQ9ykWXqN2yrPtYuMjSAH3Nyds", "xtz");
+        });
+
+        //low
+        it("should return true for correct abt addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "abt");
+        });
+
+        it("should return true for correct ape addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "ape");
+        });
+
+        it("should return true for correct bal addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "bal");
+        });
+
+        it("should return true for correct boba addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "boba");
+        });
+
+        it("should return true for correct busd addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "busd");
+        });
+
+        it("should return true for correct ctxc addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "ctxc");
+        });
+
+        it("should return true for correct cvc addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "cvc");
+        });
+
+        it("should return true for correct doge addresses", function () {
+            valid("DU81Bm3VfRY2xXfRhcCsmkU2Cht7EF11rz", "doge");
+        });
+
+        it("should return true for correct gal addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "gal");
+        });
+
+        it("should return true for correct gf addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "gf");
+        });
+
+        it("should return true for correct glm addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "glm");
+        });
+
+        it("should return true for correct gt addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "gt");
+        });
+
+        it("should return true for correct jfin addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "jfin");
+        });
+
+        it("should return true for correct kub addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "kub");
+        });
+
+        it("should return true for correct ltc addresses", function () {
+            valid("Le92F18AJpKnZZ3PCQqrUs3BNC3TwSb2u5", "ltc");
+        });
+
+        it("should return true for correct luna addresses", function () {
+            valid("terra1u868n8kekvez2lnrz44ca00ufzk78rux3sn8m2", "luna");
+        });
+
+        it("should return true for correct lyxe addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "lyxe");
+        });
+
+        it("should return true for correct mana addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "mana");
+        });
+
+        it("should return true for correct pow addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "pow");
+        });
+
+        it("should return true for correct scrt addresses", function () {
+            valid("secret1rmy9upws4syrnd5y2h0vg7sa3h9sezm8kx6m3r", "scrt");
+        });
+
+        it("should return true for correct six addresses", function () {
+            valid(
+                "GBS2RTBGEWBT7DJOH7CTA4PDVLIPONCPCIILJPPESWSHDIV4NFZJHRP3",
+                "six"
+            );
+        });
+
+        it("should return true for correct snt addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "snt");
+        });
+
+        it("should return true for correct trx addresses", function () {
+            valid("TJZs9SUn81QtP8uuEi8U2XWqcTRDa4pQzt", "trx");
+        });
+
+        it("should return true for correct usdt addresses", function () {
+            valid("0x76b9bDAE9D2bb93579a1491A0875C1dEe22C110F", "usdt");
+        });
+
+        it("should return true for correct wan addresses", function () {
+            valid("0x6998dfa10d91ef2bb03601e151d2c32c84f0ef37", "wan");
+        });
+
+        it("should return true for correct zil addresses", function () {
+            valid("zil10rwh0y5j3w9e5wp07xqmny9n76fav3qrdwccqw", "zil");
         });
     });
 
