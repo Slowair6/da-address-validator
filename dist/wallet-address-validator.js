@@ -30088,9 +30088,9 @@ module.exports = {
     },
 };
 
-CURRENCIES.sort((a, b) =>
-    a.symbol.toUpperCase() > b.symbol.toUpperCase() ? 1 : -1
-).forEach((c) => console.log('"' + c.symbol + " (" + c.name + ')",'));
+// CURRENCIES.sort((a, b) =>
+//     a.symbol.toUpperCase() > b.symbol.toUpperCase() ? 1 : -1
+// ).forEach((c) => console.log('"' + c.symbol + " (" + c.name + ')",'));
 
 ////spit out details for readme.md
 // CURRENCIES
